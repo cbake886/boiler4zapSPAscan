@@ -1,0 +1,10 @@
+var jwt = require("jsonwebtoken");
+var config =  require("../config");
+
+const jwtSign = function(data) {
+  return jwt.sign(data, config.secret_key, {expiresIn: '6h'});
+};
+
+module.exports = {
+  jwtSign
+};
