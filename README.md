@@ -1,5 +1,18 @@
 # boiler4zapSPAscan
 
+<blockquote>
+  This was created to allow for testing with the AJAX spider and OWASP ZAP active scans.
+  </blockquote>
+
+### This project was created with:
+
+* Create React App => https://reactjs.org/docs/create-a-new-react-app.html
+* Material UI => https://material-ui.com/
+* Express JS => https://expressjs.com/
+* Passport JS (JWT) => http://www.passportjs.org/packages/passport-jwt/
+* React Redux => https://react-redux.js.org/
+
+
 ### To get up and running do the following steps:
 
 1.) Clone the GitHub Repo:
@@ -15,6 +28,8 @@ npm install
 ```
 
 3.) To start the project in dev or prod mode:
+
+_This project was created on a windows machine. Some of the scripts will need the NPM package [concurrently](https://www.npmjs.com/package/concurrently) installed if you are on a windows machine. Please see the ref. below_
 
 ```shell
 npm run start_dev
