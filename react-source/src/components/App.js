@@ -21,6 +21,7 @@ export default function App() {
 
   const currentExp = useSelector(state => state.exp)
   return (
+    //<BrowserRouter>
     <HashRouter>
       <Switch>
         <Route exact path="/" render={() => <Redirect to="/app/dashboard" />} />
@@ -34,6 +35,7 @@ export default function App() {
         <Route component={Error} />
       </Switch>
     </HashRouter>
+    //</BrowserRouter>
   );
 
   // #######################################################################

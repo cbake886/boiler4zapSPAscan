@@ -43,8 +43,8 @@ function Login(props) {
   // eslint-disable-next-line
   var [error, setError] = useState(null);
   var [activeTabId, setActiveTabId] = useState(0);
-  var [loginValue, setLoginValue] = useState("admin@example.com");
-  var [passwordValue, setPasswordValue] = useState("password");
+  var [loginValue, setLoginValue] = useState("");
+  var [passwordValue, setPasswordValue] = useState("");
   const { onLogin } = useLoginHandler(props.history)
 
   const handleSubmit = (event) => {
@@ -75,16 +75,9 @@ function Login(props) {
               <Typography variant="h1" className={classes.greeting}>
                 {getGreeting()}, User
               </Typography>
-              <Fade
-                in={error}
-                style={
-                  !error ? { display: "none" } : { display: "inline-block" }
-                }
-              >
                 <Typography color="secondary" className={classes.errorMessage}>
-                  Something is wrong with your login or password :(
+                  Username is admin@example.com and the Password is password
                 </Typography>
-              </Fade>
               <form onSubmit={handleSubmit}>
               <Input
                 id="email"
