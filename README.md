@@ -27,14 +27,17 @@ git clone https://github.com/cbake886/boiler4zapSPAscan.git
 npm install
 ```
 
-3.) To start the project in dev or prod mode:
+3.) To start the project:
 
-_This project was created on a windows machine. Some of the scripts will need the NPM package [concurrently](https://www.npmjs.com/package/concurrently) installed if you are on a windows machine. Please see the ref. below_
 
 ```shell
-npm run start_dev
-
-OR
-
 npn run start_prod
 ```
+
+4.) Navigate to you browser at http://localhost:8090 and you should see a login page. The default hardcoded creds are:
+
+```shell
+Usename: admin@example.com
+Password: password
+```
+
