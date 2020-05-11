@@ -1,7 +1,7 @@
 # boiler4zapSPAscan
 
 <blockquote>
-  This was created to allow for testing with the AJAX spider and OWASP ZAP active scans.
+  This was created to allow for the testing of a more modern SPA-type app with the AJAX spider and OWASP ZAP active scans.
   </blockquote>
 
 ### This project was created with:
