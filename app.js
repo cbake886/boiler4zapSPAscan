@@ -17,15 +17,13 @@ app.use(cors());
 app.use(bodyParser.json({ type: ['application/json']}))
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-//app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/bugs', passport.authenticate("jwt", {session: false}), bugs);
 app.use('/api/user', user);
-app.get('/login', function (req, res) {
-  res.sendfile(path.join(__dirname, 'public', 'index.html'))
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
-app.get('/app', function (req, res) {
-  res.sendfile(path.join(__dirname, 'public', 'index.html'))
-})
+
 
 
 module.exports = app;

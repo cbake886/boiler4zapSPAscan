@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www ",
+    "start_prod": "node ./bin/www ",
     "start_dev": "concurrently \"nodemon\" \"cd react-source && npm start\" ",
     "build": "cd react-source && npm run build && cd .. && xcopy react-source\\build\\* public\\ /y /s"
   },

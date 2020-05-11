@@ -12,7 +12,7 @@ router.post('/signin', (req, res) => {
           expire: expire
         };
         const token = helpers.jwtSign({user: body});
-        res.cookie('jwt', token, { httpOnly: true, secure: true, sameSite: true, maxAge:180000000 });
+        res.cookie('jwt', token, { httpOnly: true, sameSite: true, maxAge:180000000 });
         res.send({
           body,
           success: true,
