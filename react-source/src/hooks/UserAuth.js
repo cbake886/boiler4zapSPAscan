@@ -3,11 +3,6 @@ import Swal from 'sweetalert2'
 import { useDispatch, batch } from 'react-redux'
 import jwt from "jsonwebtoken";
 import allActions from '../actions'
-import config from "../config";
-
-const instance = axios.create({
-  baseURL: config.baseURLApi,
-});
 
 function alert(data) {
   Swal.fire({
@@ -30,7 +25,7 @@ export default function useLoginHandler(history) {
  
           dispatch(allActions.expAction.setLoading(true))
    
-        return instance.post("/api/user/signin", { email: login, password: password })
+        return axios.post("/api/user/signin", { email: login, password: password }, { withCredentials: true })
       
       }
       AsyncFunc(login, password).then(res => {

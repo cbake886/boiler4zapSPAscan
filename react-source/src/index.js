@@ -10,12 +10,11 @@ import {
   ThemeStateContext
 } from "./context/ThemeContext";
 import { CssBaseline } from "@material-ui/core";
-import config from "../src/config";
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 import { store, persistor } from './store';
 
-axios.defaults.baseURL = config.baseURLApi;
+//axios.defaults.baseURL = config.baseURLApi;
 axios.defaults.headers.common["Content-Type"] = "application/json";
 
 

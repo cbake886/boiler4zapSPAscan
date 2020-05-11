@@ -3,6 +3,7 @@ var express = require("express");
 const router = express.Router();
 
 router.get('/pullone', (req, res) => {
+    console.log('i get here')
     sleep(500).then(() => {
     res.json('Pull One Data');
     })

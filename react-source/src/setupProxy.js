@@ -1,4 +1,4 @@
-/*
+
 module.exports = function (app) {
 const { createProxyMiddleware } = require('http-proxy-middleware')
 app.use(
@@ -7,7 +7,7 @@ app.use(
         changeOrigin: true,
         secure: false,
         logLevel: "debug",
-        target: "http://localhost:8080",
+        target: "http://localhost:8090",
         onError: function onError(err, req, res) {
             res.statusMessage(404).json({ Error: '404 - Not Found - HPM Proxy' })
         }
@@ -15,16 +15,5 @@ app.use(
 )
 
 }
-*/
-const { createProxyMiddleware } = require('http-proxy-middleware');
-module.exports = function(app) {
-  app.use(
-    '/api/',
-    createProxyMiddleware({
-      target: 'http://localhost:8080',
-      changeOrigin: true,
-      secure: false,
-      logLevel: 'debug',
-    })
-  );
-};
+
+

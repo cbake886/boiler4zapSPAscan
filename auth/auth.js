@@ -14,11 +14,11 @@ var cookieExtractor = function (req) {
 passport.use(new JWTstrategy({
   secretOrKey: config.secret_key,
   jwtFromRequest: cookieExtractor
-}, async (token, done) => {
+},(token, done) => {
   try {
-    if (Date.now() > token.expires) {
+    if (Date.now() > token.user.expire) {
       return done(401)
-    } else if (Date.now() <= token.expires) {
+    } else {
       return done(null, token);
     }
   } catch (error) {

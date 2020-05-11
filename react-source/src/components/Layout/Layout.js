@@ -16,6 +16,10 @@ import Sidebar from '../Sidebar'
 import Widget from '../Widget'
 import { Typography, Button } from '../../components/Wrappers'
 import Dashboard from '../../pages/dashboard'
+import TestTwo from '../../pages/testTwo'
+import TestThree from '../../pages/testThree'
+import TestFour from '../../pages/testFour'
+import Forms from '../../pages/forms/elements'
 import { useLayoutState } from '../../context/LayoutContext'
 import structure from '../Sidebar/SidebarStructure'
 
@@ -124,6 +128,10 @@ function Layout(props) {
                 </Widget>
                 <Switch>
                     <Route path="/app/dashboard" component={Dashboard} />
+                    <Route path="/app/forms" component={Forms} />
+                    <Route path="/app/testtwo" component={TestTwo} />
+                    <Route path="/app/testthree" component={TestThree} />
+                    <Route path="/app/testfour" component={TestFour} />
                 </Switch>
 
             </div>
