@@ -41,13 +41,47 @@ Usename: admin@example.com
 Password: password
 ```
 
-### Context settings used to test: HTTP/1.1 200 OK
+### Context settings used to test:
 
 | Attribute    |    Value          |
 ---------------|-------------------|
 | Context Name | boiler4zapSPAscan |
+
+#### Include in Context
+
+| Attribute    |    Value          |
+---------------|-------------------|
+| Regex | http://localhost:8090.* |
+
+#### Authentication
+
+Script based auth is used with the following script: 
+
+| Attribute    |    Value          |
+---------------|-------------------|
 | API URL      | http://localhost:8090/api/user/signin |
 | JSON         | {"email":"%username%","password":"%password%"} |
 | TokenAttr    | jwt |
 | Logged In Regex | \QHTTP/1.1 200 OK\E |
-| Logged Out | \Qhttp://localhost:8090/login\E
+| Logged Out | \Qhttp://localhost:8090/login\E |
+
+#### Users 
+
+| Attribute    |    Value          |
+---------------|-------------------|
+| User Name     |  admin |
+| Username      | admin@example.com |
+| Password      | password |
+
+#### Forced User 
+
+| Attribute    |    Value          |
+---------------|-------------------|
+| Username  | Admin |
+
+#### Session Management
+
+| Attribute    |    Value          |
+---------------|-------------------|
+| Session Mgmt method  | Cookie-based Session Management |
+
