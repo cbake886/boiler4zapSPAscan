@@ -41,3 +41,13 @@ Usename: admin@example.com
 Password: password
 ```
 
+### Context settings used to test: HTTP/1.1 200 OK
+
+| Attribute    |    Value          |
+---------------|-------------------|
+| Context Name | boiler4zapSPAscan |
+| API URL      | http://localhost:8090/api/user/signin |
+| JSON         | {"email":"%username%","password":"%password%"} |
+| TokenAttr    | jwt |
+| Logged In Regex | \QHTTP/1.1 200 OK\E |
+| Logged Out | \Qhttp://localhost:8090/login\E
