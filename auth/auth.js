@@ -5,8 +5,8 @@ const JWTstrategy = require('passport-jwt').Strategy;
 var token = null;
 
 var cookieExtractor = function (req) {
-  if (req && req.cookies) {
-    token = req.cookies['jwt']
+  if (req && req.cookies || req.headers['x-access-token']) {
+    token = req.cookies['jwt'] || req.headers['x-access-token']
   }
   return token;
 }
