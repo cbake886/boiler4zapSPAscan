@@ -55,7 +55,7 @@ Password: password
 
 #### Authentication
 
-Script based auth is used with the following script: 
+Script based auth is used with the following script: [authLogin.js](/authLogin.js)
 
 | Attribute    |    Value          |
 ---------------|-------------------|
